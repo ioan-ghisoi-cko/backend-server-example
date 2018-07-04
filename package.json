@@ -1,0 +1,21 @@
+{
+  "name": "backend-server-example",
+  "version": "1.0.0",
+  "description": "A sample backend used for interacting with the Checkout.com API",
+  "main": "server.js",
+  "scripts": {
+    "start": "KEY=${key} node server.js"
+  },
+  "engines": {
+    "node": "8.11.1"
+  },
+  "keywords": [],
+  "author": "Ioan Ghisoi",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  }
+}
