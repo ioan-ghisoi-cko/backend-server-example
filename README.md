@@ -16,8 +16,6 @@ For simplicity, all endpoints will need only the following data.
 
 > Other options can be changed in the config file 
 
-> Here you simply need to do a POST request with the card token:
-
 ```json
 {
   "cardToken": "card_tok_XXXX"
