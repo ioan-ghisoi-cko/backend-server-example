@@ -5,7 +5,7 @@ var express = require('express')
   , http = require('../http');
 
 // Perform an authorisation and return the charge response
-router.post('/charge', function(req, res) {
+router.post('/authorise', function(req, res) {
     
     body.authorise.cardToken = req.body.cardToken;
 
@@ -22,7 +22,7 @@ router.post('/charge', function(req, res) {
 });
 
 // Perform a 3D Secure authorisation request and return the response including the redirection URL
-router.post('/charge3d', function(req, res) {
+router.post('/authorise3d', function(req, res) {
     
     body.authorise3d.cardToken = req.body.cardToken;
 
