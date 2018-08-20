@@ -1,6 +1,6 @@
 {
   "name": "Backend Server Example",
-  "description": "A sample backend used for interacting with the Checkout.com API",
+  "description": "A sample backend",
   "repository": "https://github.com/ioan-ghisoi-cko/backend-server-example",
   "logo": "https://www.checkout.com/static/img/checkout-logo/logo.svg",
   "keywords": [
@@ -9,9 +9,5 @@
     "static"
   ],
   "env": {
-    "key": {
-      "description": "Your sandbox secret key",
-      "required": true
-    }
   }
 }
