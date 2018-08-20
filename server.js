@@ -3,8 +3,11 @@ var express = require("express"),
   http = require("http"),
   server = http.createServer(app);
 var rp = require('request-promise');
+var cors = require('cors');
 
 var port = process.env.PORT || 8000;
+
+app.use(cors({origin: '*'}));
 
 app.configure(function () {
   app.use(express.bodyParser());
@@ -28,6 +31,7 @@ app.post('/csv', function (req, res) {
         // console.log(response);
         res.setHeader('Content-disposition', 'attachment; filename=testing.csv');
         res.set('Content-Type', 'text/csv');
+        res.setHeader('Access-Control-Allow-Origin', '*');
         res.status(200).send(response);
       } catch (err) {
         console.log(err);
@@ -52,6 +56,7 @@ app.post('/balance', function (req, res) {
     .then(function (response) {
       try {
         console.log(response);
+        res.setHeader('Access-Control-Allow-Origin', '*');
         res.status(200).send(response);
       } catch (err) {
         console.log(err);
