@@ -28,13 +28,9 @@ app.post('/csv', function (req, res) {
   rp(options)
     .then(function (response) {
       try {
-        // console.log(response);
-        res.setHeader('Content-disposition', 'attachment; filename=testing.csv');
-        res.set('Content-Type', 'text/csv');
-        res.setHeader('Access-Control-Allow-Origin', '*');
         res.status(200).send(response);
       } catch (err) {
-        console.log(err);
+        res.status(500).send("Server error");
       }
     })
     .catch(function (err) {
@@ -55,11 +51,9 @@ app.post('/balance', function (req, res) {
   rp(options)
     .then(function (response) {
       try {
-        console.log(response);
-        res.setHeader('Access-Control-Allow-Origin', '*');
         res.status(200).send(response);
       } catch (err) {
-        console.log(err);
+        res.status(500).send("Server error");
       }
     })
     .catch(function (err) {
