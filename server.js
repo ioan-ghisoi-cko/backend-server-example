@@ -19,7 +19,7 @@ app.post('/csv', function (req, res) {
   var options = {
     method: 'get',
     json: true,
-    url: "https://api.checkout.com/reconciliation/transactions/download?from=" + req.body.startDate + "&to=" + req.body.endDate,
+    url: "https://api.checkout.com/reconciliation/transactions/download?from=" + req.body.startDate + "&to=" + req.body.endDate + "&payout_id=" + req.body.payoutId,
     headers: {
       'authorization': req.body.key,
     }
